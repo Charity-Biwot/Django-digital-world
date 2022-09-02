@@ -1,0 +1,6 @@
+<h2>Notification Registration</h2>
+<form method="POST" class="registration_form">{% csrf_token%}
+    <!--cross site request forgery-->
+    {{form.as_p}}<!--how to enter variable-->
+    <button type="submit" class="submit_btn">Register</button>
+</form>
