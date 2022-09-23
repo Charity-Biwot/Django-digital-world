@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Account, Card, Currency, Customer, Loan, Notification, Receipt, Reward, Third_party, Transaction, Wallet
+# use from .models import *
 
 # Register your models here.
 class CustomerAdmin(admin.ModelAdmin):

@@ -10,6 +10,9 @@ from .models import Third_party
 from .models import Loan
 from .models import Reward
 
+# Use single import statement for simplicicty
+# and to replace all the above codes
+# from .models import *
 
 class CustomerRegistrationForm(forms.ModelForm):
     class Meta:
