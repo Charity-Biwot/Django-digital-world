@@ -1,0 +1,15 @@
+<table>
+    <th>
+        <td> country_origin </td>
+        <td> currency_symbol </td>
+        <td> currency_name </td>
+    </th>
+    {% for currency in currencys%}
+    <tr>
+        <td>{{ currency.country_origin}}</td>
+        <td>{{ currency.currency_symbol}}</td>
+        <td>{{ currency.currency_name}}</td>
+    </tr>
+    {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
+    {% endfor%}
+</table>

@@ -1,0 +1,22 @@
+<table>
+    <th>
+        <td> Full name </td>
+        <td> Email </td>
+        <td> phone number</td>
+        <td> Transaction cost </td>
+        <td> Currency </td>
+        <td> Account </td>
+        <td> Active </td>
+
+
+
+    </th>
+    {% for thirdparty in thirdpartys%}
+    <tr>
+        <td>{{ customer.first_name}}</td>
+        <td>{{ customer.email}}</td>
+        <td>{{ customer.age}}</td>
+    </tr>
+    {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
+    {% endfor%}
+</table>

@@ -51,7 +51,7 @@ class CardRegistrationForm(forms.ModelForm):
         fields = "__all__"
         
 
-class ThirdpartyRegistrationForm(forms.ModelForm):
+class Third_partyRegistrationForm(forms.ModelForm):
     
     class Meta:
         model = Third_party

@@ -1,0 +1,19 @@
+<table>
+    <th>
+        <td> Date created </td>
+        <td> Time </td>
+        <td> Message</td>
+        <td> is active</td>
+        <td> image </td>
+        <td> is Active </td>
+        <td> Recipient </td>
+    </th>
+    {% for notification in notifications%}
+    <tr>
+        <td>{{ customer.first_name}}</td>
+        <td>{{ customer.email}}</td>
+        <td>{{ customer.age}}</td>
+    </tr>
+    {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
+    {% endfor%}
+</table>

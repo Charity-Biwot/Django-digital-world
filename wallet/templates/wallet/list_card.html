@@ -1,0 +1,27 @@
+<table>
+    <th>
+        <td> card_name </td>
+        <td> date_issued </td>
+        <td> card_number</td>
+        <td> signature </td>
+        <td> expiry_date </td>
+        <td> card_status </td>
+        <td> security_code </td>
+        <td> issuer </td>
+        <td> account </td>
+    </th>
+    {% for card in cards%}
+    <tr>
+        <td>{{ card.card_name}}</td>
+        <td>{{ card.date_issued}}</td>
+        <td>{{ card.card_number}}</td>
+        <td>{{ card.signature}}</td>
+        <td>{{ card.expiry_date}}</td>
+        <td>{{ card.card_status}}</td>
+        <td>{{ card.security_code}}</td>
+        <td>{{ card.issuer}}</td>
+        <td>{{ card.account}}</td>
+    </tr>
+    {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
+    {% endfor%}
+</table>

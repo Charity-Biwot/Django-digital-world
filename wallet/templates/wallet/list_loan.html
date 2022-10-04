@@ -1,0 +1,32 @@
+<table>
+    <th>
+        <td> interestrate </td>
+        <td> loantype </td>
+        <td> amount</td>
+        <td> wallet </td>
+        <td> duedate </td>
+        <td> loanterm </td>
+        <td> interestrate </td>
+        <td> payment_date </td>
+        <td> duration</td>
+        <td> balance</td>
+        <td> guaranter </td>
+
+    </th>
+    {% for loan in loans%}
+    <tr>
+        <td>{{ loan.interestrate}}</td>
+        <td>{{ loan.loan_type}}</td>
+        <td>{{ loan.amount}}</td>
+        <td>{{ loan.wallet}}</td>
+        <td>{{ loan.duedate}}</td>
+        <td>{{ loan.loanterm}}</td>
+        <td>{{ loan.interestrate}}</td>
+        <td>{{ loan.paymentdate}}</td>
+        <td>{{ loan.duration}}</td>
+        <td>{{ loan.balance}}</td>
+        <td>{{ loan.guaranter}}</td>
+    </tr>
+    {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
+    {% endfor%}
+</table>

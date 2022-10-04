@@ -1,53 +1,39 @@
 from django .urls import path
-from .views import register_customer, register_receipt, register_thirdparty, register_wallet
-from .views import register_currency
-from .views import register_account
-from .views import register_transaction
-from .views import register_receipt
-from .views import register_card
-from .views import register_thirdparty
-from .views import register_notification
-from .views import register_loan
-from .views import reward_register
-
-
+from .import views
 urlpatterns = [
-    path("register/", register_customer, name="registration"),
+    path("register/",views.register_customer, name="registration"),
+    path("currencys/",views.register_currency, name="register_currencys"),
+    path("wallets/",views.register_wallet, name="register_wallets"),
+    path("accounts/",views.register_account, name="register_accounts"),
+    path("transactions/",views.register_transaction,name="register_transactions"),
+    path("receipts/",views.receipt_register,name="register_receipts"),
+    path("card/",views.register_card,name="register_card"),
+    path("thirdpartys/",views.register_third_party,name="register_thirdpartys"),
+    path("notifications/",views.register_notification,name="register_notifications"),
+    path("loan/", views.register_loan,name="register_loan"),
+    path("rewards/",views.register_reward,name="register_rewards"),
+    path("customers/",views.list_Customer,name = "register_customers"),
+    path("currency/",views.list_Currency,name = "register_currency"),
+    path("account/",views.list_Account,name = "register_account"),
+    path("wallet/",views.list_Wallet,name = "register_wallet"),
+    path("receipt/",views.list_Receipt,name = "register_receipt"),
+    path("transaction/",views.list_Transaction,name = "register_transaction"),
+    path("reward/",views.list_Reward,name = "register_reward"),
+    path("loans/",views.list_Loan,name = "register_loans"),
+    path("notification/",views.list_Notification,name = "register_notification"),
+    path("cards/",views.list_Card,name = "register_cards"),
+    path("thirdparty/",views.list_Thirdparty,name = "register_thirdparty"),
+
+
+
+
+
+
+
+
+
+
+    # path("customer/<int:id>",views.customer_profile, name = "customer_profile"),
+    # path("customer/edit/<int.id>/",views.edit_customer,name = "edit_customer"),  
 ]
 
-urlpatterns = [
-    path("register/", register_currency, name="registration"),
-]
-
-urlpatterns = [
-    path("register/", register_wallet, name="registration"),
-]
-
-urlpatterns = [
-    path("register/", register_account, name="registration"),
-]
-urlpatterns=[
-    path("register/", register_transaction,name="registration"),
-]
-
-urlpatterns=[
-    path("register/", register_receipt,name="registration"),
-]
-
-urlpatterns=[
-    path("register/", register_card,name="registration"),
-]
-
-urlpatterns=[
-    path("register/", register_thirdparty,name="registration"),
-]
-
-urlpatterns=[
-    path("register/", register_notification,name="registration"),
-]
-urlpatterns=[
-    path("register/", register_loan,name="registration"),
-]
-urlpatterns=[
-    path("register/", reward_register,name="registration"),
-]

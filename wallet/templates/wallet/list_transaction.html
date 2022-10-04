@@ -1,0 +1,24 @@
+<table>
+    <th>
+        <td> Transaction charge </td>
+        <td> Transaction cost </td>
+        <td> wallet</td>
+        <td> Transaction type </td>
+        <td> Origin account </td>
+        <td> Destination account </td>
+        <td> status </td>
+        <td> type </td>
+
+
+
+
+    </th>
+    {% for customer in customers%}
+    <tr>
+        <td>{{ customer.first_name}}</td>
+        <td>{{ customer.email}}</td>
+        <td>{{ customer.age}}</td>
+    </tr>
+    {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
+    {% endfor%}
+</table>

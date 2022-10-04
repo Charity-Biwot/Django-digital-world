@@ -1,0 +1,35 @@
+<table>
+    <th>
+        <td>first_name</td>
+        <td>last_name</td>
+        <td>email</td>
+        <td>age</td>
+        <td>address</td>
+        <td>gender</td>
+        <td>nationality</td>
+        <td>phone_number</td>
+        <td>profile_picture</td>
+        <td>marital_status</td>
+    </th>
+    {% for customer in customers%}
+    <tr>
+        <td>{{ customer.first_name}}</td>
+        <td>{{ customer.last_name}}</td>
+        <td>{{ customer.email}}</td>
+        <td>{{ customer.age}}</td>
+        <td>{{ customer.address}}</td>
+        <td>{{ customer.gender}}</td>
+        <td>{{ customer.nationality}}</td>
+        <td>{{ customer.phone_number}}</td>
+        <td>{{ customer.profile_picture}}</td>
+        <td>{{ customer.marital_status}}</td>
+
+
+
+
+
+
+    </tr>
+    {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
+    {% endfor%}
+</table>
