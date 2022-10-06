@@ -23,17 +23,19 @@ urlpatterns = [
     path("notification/",views.list_Notification,name = "register_notification"),
     path("cards/",views.list_Card,name = "register_cards"),
     path("thirdparty/",views.list_Thirdparty,name = "register_thirdparty"),
-
-
-
-
-
-
-
-
-
-
-    # path("customer/<int:id>",views.customer_profile, name = "customer_profile"),
-    # path("customer/edit/<int.id>/",views.edit_customer,name = "edit_customer"),  
+    path("profile/<int:id>/", views.customer_profile, name="customer_profile"),
+    # path("customers/edit/<int:id>/", views.edit_customer, name="edit_customer"),
 ]
+
+
+
+
+
+
+
+
+
+
+
+   
 

@@ -1,21 +1,22 @@
 <table>
     <th>
-        <td> Full name </td>
-        <td> Email </td>
-        <td> phone number</td>
-        <td> Transaction cost </td>
-        <td> Currency </td>
-        <td> Account </td>
-        <td> Active </td>
-
-
-
+        <td> full_name </td>
+        <td> email </td>
+        <td> phone_number</td>
+        <td> transaction_cost </td>
+        <td> currency </td>
+        <td> account </td>
+        <td> active </td>
     </th>
     {% for thirdparty in thirdpartys%}
     <tr>
-        <td>{{ customer.first_name}}</td>
-        <td>{{ customer.email}}</td>
-        <td>{{ customer.age}}</td>
+        <td>{{ thirdparty.full_name}}</td>
+        <td>{{ thirdparty.email}}</td>
+        <td>{{ thirdparty.phone_number}}</td>
+        <td>{{ thirdparty.transaction_cost}}</td>
+        <td>{{ thirdparty.currency}}</td>
+        <td>{{ thirdparty.account}}</td>
+        <td>{{ thirdparty.active}}</td>  
     </tr>
     {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
     {% endfor%}

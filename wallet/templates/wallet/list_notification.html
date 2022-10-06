@@ -1,18 +1,22 @@
 <table>
     <th>
-        <td> Date created </td>
-        <td> Time </td>
-        <td> Message</td>
-        <td> is active</td>
+        <td> date_created </td>
+        <td> time </td>
+        <td> message</td>
+        <td> is_active</td>
         <td> image </td>
-        <td> is Active </td>
-        <td> Recipient </td>
+        <td> is_active </td>
+        <td> recipient </td>
     </th>
     {% for notification in notifications%}
     <tr>
-        <td>{{ customer.first_name}}</td>
-        <td>{{ customer.email}}</td>
-        <td>{{ customer.age}}</td>
+        <td>{{ notification.date_created}}</td>
+        <td>{{ notification.time}}</td>
+        <td>{{ notification.message}}</td>
+        <td>{{ notification.is_active}}</td>
+        <td>{{ notification.image}}</td>
+        <td>{{ notification.is_active}}</td>
+        <td>{{ notification.recipient}}</td>
     </tr>
     {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
     {% endfor%}

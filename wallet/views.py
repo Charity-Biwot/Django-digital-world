@@ -184,13 +184,13 @@ def list_Thirdparty(request):
         thirdPartyaccounts=Third_party.objects.all()
         return render(request,"wallet/list_thirdparty.html",{"thirdPartyaccounts":thirdPartyaccounts})
         
-# def customer_profile(request, id):
-#     customer=Customer.object.get(id=id)
-#     return render(request,"wallet/customer_profile.html",{"customer":Customer})
+def customer_profile(request, id):
+    customer=Customer.object.get(id=id)
+    return render(request,"wallet/customer_profile.html",{"customer":Customer})
 
-# def customer_profile(request, id):
-#     customer=Customer.object.get(id=id)
-#     request=="POST"
+def customer_profile(request, id):
+    customer=Customer.object.get(id=id)
+    request=="POST"
     
 
        

@@ -1,14 +1,14 @@
 <table>
     <th>
-        <td> Receipt file </td>
-        <td> Date </td>
-        <td> Transaction</td>
+        <td> receipt_file </td>
+        <td> date </td>
+        <td> transaction</td>
     </th>
-    {% for customer in customers%}
+    {% for receipt in receipts%}
     <tr>
-        <td>{{ customer.first_name}}</td>
-        <td>{{ customer.email}}</td>
-        <td>{{ customer.age}}</td>
+        <td>{{ receipt.receipt_file}}</td>
+        <td>{{ receipt.date}}</td>
+        <td>{{ receipt.transaction}}</td>
     </tr>
     {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
     {% endfor%}

@@ -1,19 +1,22 @@
 <table>
     <th>
-        <td> Customer </td>
-        <td> Balance </td>
-        <td> Pin </td>
-        <td> Currency </td>
-        <td> Active </td>
-        <td> Date created </td>
-        <td> Wallet type </td>
-        <td> Bank account name </td>
+        <td> customer </td>
+        <td> balance </td>
+        <td> pin </td>
+        <td> currency </td>
+        <td> active </td>
+        <td> date_created </td>
+        <td> wallet_type </td>
+        <td> bank_account_name </td>
     </th>
-    {% for customer in customers%}
+    {% for wallet in wallets%}
     <tr>
-        <td>{{ customer.first_name}}</td>
-        <td>{{ customer.email}}</td>
-        <td>{{ customer.age}}</td>
+        <td>{{ wallet.customer}}</td>
+        <td>{{ wallet.balance}}</td>
+        <td>{{ wallet.pin}}</td>
+        <td>{{ wallet.currency}}</td>
+        <td>{{ wallet.active}}</td>
+        <td>{{ wallet.currency}}</td>
     </tr>
     {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
     {% endfor%}

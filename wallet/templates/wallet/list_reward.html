@@ -1,15 +1,18 @@
 <table>
     <th>
-        <td> Points </td>
-        <td> Wallet </td>
-        <td> Date time received</td>
-        <td> Transaction </td>
+        <td> points </td>
+        <td> wallet </td>
+        <td> date_time_received</td>
+        <td> transaction </td>
     </th>
-    {% for customer in customers%}
+    {% for reward in rewards%}
     <tr>
-        <td>{{ customer.first_name}}</td>
-        <td>{{ customer.email}}</td>
-        <td>{{ customer.age}}</td>
+        <td>{{ reward.points}}</td>
+        <td>{{ reward.wallet}}</td>
+        <td>{{ reward.date_time_received}}</td>
+        <td>{{ reward.transaction}}</td>
+        <td>{{ reward.}}</td>
+
     </tr>
     {% comment %} <td><a href = "{% url 'customer_profile' id = customer:id %}"> {% endcomment %}
     {% endfor%}
