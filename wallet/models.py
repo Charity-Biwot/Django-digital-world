@@ -42,7 +42,6 @@ class Wallet(models.Model):
 class Account(models.Model):
     wallet=models.ForeignKey('Wallet', on_delete=models.CASCADE,related_name='Account_wallet',null=True)
     name=models.CharField(max_length=15,null=True)
-    account_type=models.CharField(max_length=15,null=True)
     balance=models.IntegerField()
     account_type=models.CharField(max_length=23,null=True)
 
